@@ -24,3 +24,15 @@
   - Có thể không cần JS
   - Mọi request đều đẩy lên server
   - SSR - Server side rendering
+- <b>document.createElement()</b> -> Node element
+  - Object.assign(element.style, {
+      color: 'blue,
+      backgroundColor: '#333'
+    })
+  - document.appendChild()
+- <b>React.createElement()</b> -> React element
+  - React.createElement(type, props, children)
+- <b>React-DOM</b>
+  - ReactDOM.render(element, container, callback)
+  - Render React elemnt -> DOM element -> UI
+  - React-Native -> iOS, Android 

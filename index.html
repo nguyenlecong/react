@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script src="https://www.unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://www.unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script>
+        // DOM
+        const h1DOM = document.createElement('h1')
+
+        h1DOM.title = 'Hello'
+        h1DOM.className = 'heading'
+
+        h1DOM.innerText = 'Hello guys!'
+
+        document.body.appendChild(h1DOM)
+
+        // React
+        const h1React = React.createElement('h1', {
+            title: 'Hello',
+            className: 'heading'
+        }, 'Hello guys!')
+    </script>
+
+    <script>
+        // DOM
+        const ulDOM = document.createElement('ul')
+        ulDOM.id = 'dom-ul'
+        ulDOM.style = 'color: red; font-size: 30px'
+
+        const liDOM1 = document.createElement('li')
+        liDOM1.innerText = 'DOM'
+        liDOM1.id = 'dom-li-1'
+
+        const liDOM2 = document.createElement('li')
+        liDOM2.innerText = 'React'
+
+        ulDOM.appendChild(liDOM1)
+        ulDOM.appendChild(liDOM2)
+
+        document.body.appendChild(ulDOM)
+
+        //React
+        const ulReact = React.createElement(
+            'ul', {
+                id: 'react-ul',
+                style: 'color: read; font-size: 30px'
+            },
+            React.createElement('li', {
+                id: 'react-li-1'
+            }, 'DOM'),
+            React.createElement('li', null, 'React'),
+        )
+    </script>
+
+    <script>
+        // React
+        const divReact = React.createElement('div', {
+                className: 'divReact'
+            },
+            React.createElement('h2', {
+                title: 'React'
+            }, 'React'),
+            React.createElement('p', {}, 'React'))
+
+        // Get root element
+        const container = document.getElementById('root')
+
+        // React-DOM -> render UI
+        ReactDOM.render(divReact, root)
+
+        // React-DOM v.18
+        // const root = ReactDOM.createRoot(container)
+        // root.render(divReact)
+    </script>
+</body>
+
+</html>
