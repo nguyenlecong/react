@@ -107,13 +107,27 @@
     <script type="text/babel">
         function Header() { return (
         <div className="header">Header</div>) }; class Content extends React.Component { render() { return (
-        <div className="content">Content</div>) } } const app = (
+        <div className="content">Content</div>) } }; const app = (
         <div className="wrapper">
             <Header />
             <Cotent />
             <div className="footer">Footer</div>
         </div>
         ); React.render(app, document.getElementById('root'))
+    </script>
+
+    <script type="text/babel">
+        function PostItem(props) { return (
+        <div className='post-item'>
+            <h2>{props.title}</h2>
+        </div>
+        ) }; function App(){ return (
+        <div id="wrapper">
+            <PostItem title="Title" />
+        </div>
+        ) }; ReactDOM.render(
+
+        <App />, document.getElementById('root'))
     </script>
 </body>
 

@@ -45,3 +45,18 @@
 - <b>React element types</b>
   - string, function/class
   - Wrapper: Header, Content, Footer component
+- <b>Props</b>
+  - Object chứa các thuộc tính mô tả React element
+  - React elements (~thẻ JSX)
+    - Props giống như attribute của thẻ HTML
+    - 2 prop class, for => classNam, htmlFor
+    - Phải tuân theo quy ước có sẵn
+  - React components (~function)
+    - Props giống như đối số cho Component
+    - Tự do đặt tên props
+    - Đặt theo camelCase
+    - *Có thể bao gồm dấu gạch ngang
+  - Chú ý:
+    - Prop "key" là prop đặc biệt
+    - Props cơ bản là đối số của Component -> Props có thể là bất cứ kiểu dữ liệu gì
+    - Sử dụng destructuring
