@@ -7,6 +7,7 @@
     <title>ReactJS</title>
     <script src="https://www.unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://www.unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://www.unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 
 <body>
@@ -80,6 +81,27 @@
         // React-DOM v.18
         // const root = ReactDOM.createRoot(container)
         // root.render(divReact)
+    </script>
+
+    <!-- JSX -->
+    <!-- Không cần .join() -->
+    <script type="text/babel">
+        const name = 'React'; const ul =
+        <ul>
+            <li>JS</li>
+            <li>{name}</li>
+        </ul>
+        ReactDOM.render(ul, document.getElementById('root')); const arr = [{ name: 'HTML' }, { name: 'CSS' }, {name: 'React'}]; const jsx = (
+        <ul>
+            {arr.map((e, i) =>
+            <li key={i}>{e.name}</li>)}
+        </ul>
+        ); ReactDOM.render(jsx, document.getElementById('root')); const multiElements = (
+        <React.Fragment>
+            <h1>H1</h1>
+            <h2>H2</h2>
+        </React.Fragment>
+        ); ReactDOM.render(multiElements, document.getElementById('root'));
     </script>
 </body>
 

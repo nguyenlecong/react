@@ -35,4 +35,10 @@
 - <b>React-DOM</b>
   - ReactDOM.render(element, container, callback)
   - Render React elemnt -> DOM element -> UI
-  - React-Native -> iOS, Android 
+  - React-Native -> iOS, Android
+- <b>JSX</b>
+  - Javascript XML: hỗ trợ viết XML, HTML trong JS
+  - XML: Extensible Markup Language
+  - HTML là cú pháp mở rộng của XML
+  - JSX không phải là HTML, cần có JS -> Babel
+  - React.Fragment: Wrapper
