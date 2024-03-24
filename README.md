@@ -42,3 +42,6 @@
   - HTML là cú pháp mở rộng của XML
   - JSX không phải là HTML, cần có JS -> Babel
   - React.Fragment: Wrapper
+- <b>React element types</b>
+  - string, function/class
+  - Wrapper: Header, Content, Footer component
