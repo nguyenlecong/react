@@ -60,3 +60,21 @@
     - Prop "key" là prop đặc biệt
     - Props cơ bản là đối số của Component -> Props có thể là bất cứ kiểu dữ liệu gì
     - Sử dụng destructuring
+- <b>Làm việc với JSX</b>
+  - Xử lý DOM events
+  - Tạo Component linh hoạt
+    - Component do chúng ta tự định nghĩa phải viết in hoa ký tự đầu
+      - Chọn component trong 1 object
+    - Booleans, Null & Undedined không được render
+    - Kết hợp toán tử logic để render theo điều khiển
+  - Props trong JSX
+    - < YourComponent
+          propName1="String literals"
+          propName2={expression}
+    />
+    - Props default to "true"
+    - Spread/Rest props
+    - Children prop
+      - < YourComponent>String liternals</ YourComponent>
+      - < YourComponent>{expression}</ YourComponent>
+    - Render props
