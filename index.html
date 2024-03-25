@@ -86,48 +86,68 @@
     <!-- JSX -->
     <!-- Không cần .join() -->
     <script type="text/babel">
-        const name = 'React'; const ul =
-        <ul>
-            <li>JS</li>
-            <li>{name}</li>
-        </ul>
-        ReactDOM.render(ul, document.getElementById('root')); const arr = [{ name: 'HTML' }, { name: 'CSS' }, {name: 'React'}]; const jsx = (
-        <ul>
-            {arr.map((e, i) =>
-            <li key={i}>{e.name}</li>)}
-        </ul>
-        ); ReactDOM.render(jsx, document.getElementById('root')); const multiElements = (
-        <React.Fragment>
-            <h1>H1</h1>
-            <h2>H2</h2>
-        </React.Fragment>
-        ); ReactDOM.render(multiElements, document.getElementById('root'));
+        const name = 'React'
+        const ul =
+            <ul>
+                <li>JS</li>
+                <li>{name}</li>
+            </ul>
+        ReactDOM.render(ul, document.getElementById('root'))
+
+        const arr = [
+            {name: 'HTML' },
+            {name: 'CSS' },
+            {name: 'React'}]
+
+        const jsx = (
+            <ul>
+                {arr.map((e, i) =>
+                <li key={i}>{e.name}</li>)}
+            </ul>
+            )
+            ReactDOM.render(jsx, document.getElementById('root'))
+            
+            const multiElements = (
+                <React.Fragment>
+                    <h1>H1</h1>
+                    <h2>H2</h2>
+                </React.Fragment>
+                )
+            ReactDOM.render(multiElements, document.getElementById('root'));
     </script>
 
     <script type="text/babel">
-        function Header() { return (
-        <div className="header">Header</div>) }; class Content extends React.Component { render() { return (
-        <div className="content">Content</div>) } }; const app = (
-        <div className="wrapper">
-            <Header />
-            <Cotent />
-            <div className="footer">Footer</div>
-        </div>
-        ); React.render(app, document.getElementById('root'))
+        function Header() {
+            return (<div className="header">Header</div>)
+        }
+        
+        class Content extends React.Component {
+            render() { return (
+                <div className="content">Content</div>) } }
+                
+        const app = (
+            <div className="wrapper">
+                <Header />
+                <Content />
+                <div className="footer">Footer</div>
+            </div>)
+        React.render(app, document.getElementById('root'))
     </script>
 
     <script type="text/babel">
-        function PostItem(props) { return (
-        <div className='post-item'>
-            <h2>{props.title}</h2>
-        </div>
-        ) }; function App(){ return (
-        <div id="wrapper">
-            <PostItem title="Title" />
-        </div>
-        ) }; ReactDOM.render(
-
-        <App />, document.getElementById('root'))
+        function PostItem(props) {
+            return (
+                <div className='post-item'>
+                    <h2>{props.title}</h2>
+                </div>)}
+        
+        function App() {
+            return (
+                <div id="wrapper">
+                    <PostItem title="Title" />
+                </div>)
+            }
+        ReactDOM.render(<App />, document.getElementById('root'))
     </script>
 </body>
 
