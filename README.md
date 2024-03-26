@@ -40,7 +40,7 @@
   - Javascript XML: hỗ trợ viết XML, HTML trong JS
   - XML: Extensible Markup Language
   - HTML là cú pháp mở rộng của XML
-  - JSX không phải là HTML, cần có JS -> Babel
+  - JSX không phải là `HTML, cần có JS -> Babel
   - React.Fragment: Wrapper
 - <b>React element types</b>
   - string, function/class
@@ -78,3 +78,5 @@
       - < YourComponent>String liternals</ YourComponent>
       - < YourComponent>{expression}</ YourComponent>
     - Render props
+  - <b>Tạo dự án với React + Webpack</b>
+    - webpack is a module bundler
