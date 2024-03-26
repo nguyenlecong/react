@@ -78,5 +78,7 @@
       - < YourComponent>String liternals</ YourComponent>
       - < YourComponent>{expression}</ YourComponent>
     - Render props
-  - <b>Tạo dự án với React + Webpack</b>
-    - webpack is a module bundler
+- <b>Tạo dự án với React + Webpack</b>
+  - webpack is a module bundler
+- <b>Create React App</b>
+  - CRA: Set up a modern web app by running one command
