@@ -82,3 +82,22 @@
   - webpack is a module bundler
 - <b>Create React App</b>
   - CRA: Set up a modern web app by running one command
+- <b>NPM, NPX, YARN</b>
+  - NPM - node package manager
+    - Cài tuần tự từng thư viện
+    - project scope
+      - npm install (i) react react-dom -> dependencies
+      - npm i --save-dave (-D) react react-dom -> devDependences
+      - npm uninstall react react-dom
+    - global scope
+      - npm i --global (-g) create-react-app
+      - npm uninstall -g create-react-app
+  - NPX - NPM Package executor
+    - run and execute packages without having to install them locally or globally
+  - YARN - Yet Another Resource Negotiator
+    - Cài song song nhiều thư viện
+    - Cơ chế cache: lưu pkg vào thư mục tạm -> reinstall nhanh hơn
+    - npm i -g yarn
+    - Cú pháp so với npm: đa số thay npm bằng yarn
+  - Lưu ý:
+    - Luôn bật development server (npm start || yarn start)
