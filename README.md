@@ -101,3 +101,11 @@
     - Cú pháp so với npm: đa số thay npm bằng yarn
   - Lưu ý:
     - Luôn bật development server (npm start || yarn start)
+- <b>Hooks</b>
+  - useState
+    - Khi muốn dữ liệu thay đổi thì giao diện tự động được cập nhật (render lại theo dữ liệu)
+    - Component được re-render sau khi `setState`
+    - Initial state chỉ dùng cho lần đầu
+    - Set state với callback? Trả về giá trị mới nhưng không render ngay
+    - Initial state với callback? Lấy giá trị return của callback làm initial state
+    - Set state là `thay thế` state bằng giá trị mới
