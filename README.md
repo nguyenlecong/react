@@ -102,7 +102,7 @@
   - Lưu ý:
     - Luôn bật development server (npm start || yarn start)
 - <b>Hooks</b>
-  - useState
+  - <b>useState</b>
     - Khi muốn dữ liệu thay đổi thì giao diện tự động được cập nhật (render lại theo dữ liệu)
     - Component được re-render sau khi `setState`
     - Initial state chỉ dùng cho lần đầu
@@ -115,3 +115,15 @@
     - Mounted & Unmounted
       - Mounted: thời điểm đưa 1 component vào sử dụng
       - Unmounted: thời điểm gỡ nó ra, không sử dụng nữa
+  - <b>useEffect</b>
+    - Khi muốn sửa dữ liệu bên cạnh (side effect) hoạt động chính
+    - Side effect: nói tới một chương trình phần mềm, khi có một tác động xảy ra dẫn tới dữ liệu của chương trình thay đổi -> Update DOM, Call API ({JSON} Placeholder), Listen DOM events
+    - useEffect with dependencies, DOM events, timer functions, preview avatar, fake Chat App
+  - <b>useLayoutEffect</b>
+  - <b>useRef</b>
+  - <b>useCallback</b>
+  - <b>useMemo</b>
+  - <b>useReducer</b>
+  - <b>useContext</b>
+  - <b>useImperativeHandle</b>
+  - <b>useDebugvalue</b>
