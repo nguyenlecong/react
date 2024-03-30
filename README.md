@@ -107,5 +107,11 @@
     - Component được re-render sau khi `setState`
     - Initial state chỉ dùng cho lần đầu
     - Set state với callback? Trả về giá trị mới nhưng không render ngay
-    - Initial state với callback? Lấy giá trị return của callback làm initial state
+    - Initial state với callback? Lấy giá trị return của callback làm initial state, tối ưu performance
     - Set state là `thay thế` state bằng giá trị mới
+    - Two-way binding:
+      - One-way binding: ràng buộc một chiều (ReactJS) -> ràng buộc hai chiều (VueJS) - gõ bên ngoài thì bên trong thay đổi, bên trong thay đổi thì bên ngoài cũng thay đổi
+      - Form, radio, checkbox, todolist app examples
+    - Mounted & Unmounted
+      - Mounted: thời điểm đưa 1 component vào sử dụng
+      - Unmounted: thời điểm gỡ nó ra, không sử dụng nữa
