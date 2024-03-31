@@ -23,6 +23,7 @@ function Content() {
     const [type, setType] = useState('posts')
     const [showGoToTop, setShowGoToTop] = useState(false)
     const [width, setWidth] = useState(window.innerWidth)
+    const [countdown, setCountdown] = useState(180)
 
     useEffect(() => {
         document.title = title
@@ -58,6 +59,15 @@ function Content() {
         }
     }, [])
 
+    useEffect(() => {
+        const timerId =  setInterval(() => {
+            setCountdown(prevState => prevState - 1)
+        }, 1000)
+
+        // Cleanup function
+        return () => clearInterval(timerId)
+    }, [])
+
     return (
         <div>
             <input
@@ -80,6 +90,10 @@ function Content() {
 
             <h1>
                 {width}
+            </h1>
+
+            <h1>
+                {countdown}
             </h1>
 
             <ul>
