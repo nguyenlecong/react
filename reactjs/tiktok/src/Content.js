@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react'
 // -----------------------------
 // 1. Callback luôn được gọi sau khi component mounted
 // 2. Cleanup function luôn được gọi trước khi component unmounted
+// 3. Cleanup function luôn được gọi trước khi callback được gọi (trừ lần mounted)
 
 
 const tabs = ['posts', 'comments', 'albums']
@@ -24,6 +25,7 @@ function Content() {
     const [showGoToTop, setShowGoToTop] = useState(false)
     const [width, setWidth] = useState(window.innerWidth)
     const [countdown, setCountdown] = useState(180)
+    const [avatar, setAvatar] = useState()
 
     useEffect(() => {
         document.title = title
@@ -68,51 +70,83 @@ function Content() {
         return () => clearInterval(timerId)
     }, [])
 
+    useEffect(() => {
+        // Cleanup function
+        return () => {
+            avatar && URL.revokeObjectURL(avatar.preview)
+        }
+    }, [avatar])
+    const handlePreviewAvatar = (e) => {
+        const file = e.target.files[0]
+        file.preview =  URL.createObjectURL(file)
+        setAvatar(file)
+    }
+
     return (
         <div>
-            <input
-                value={title}
-                onChange={e => setTitle(e.target.value)}
-            />
+            <div>
+                <input
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}
+                />
+            </div>
 
-            {tabs.map(tab => {
-                return (<button
-                    key={tab}
-                    style={type === tab ? {
-                        color: '#fff',
-                        backgroundColor: '#333'
-                    } : {}}
-                    onClick = {() => setType(tab)}
-                    >
-                        {tab}
-                    </button>)
-            })}
-
-            <h1>
-                {width}
-            </h1>
-
-            <h1>
-                {countdown}
-            </h1>
-
-            <ul>
-                {posts.map(post => {
-                    return (<li key={post.id}>{post.title  || post.name}</li>)
+            <div>
+                {tabs.map(tab => {
+                    return (<button
+                        key={tab}
+                        style={type === tab ? {
+                            color: '#fff',
+                            backgroundColor: '#333'
+                        } : {}}
+                        onClick = {() => setType(tab)}
+                        >
+                            {tab}
+                        </button>)
                 })}
-            </ul>
+            </div>
 
-            {showGoToTop && (
-                <button 
-                    style={{
-                        position: 'fixed',
-                        right: 20,
-                        bottom: 20
-                    }}
-                >
-                    Go To Top
-                </button>
-            )}
+            <div>
+                <h1>
+                    {width}
+                </h1>
+            </div>
+            
+            <div>
+                <h1>
+                    {countdown}
+                </h1>
+            </div>
+
+            <div>
+                <input
+                    type='file'
+                    onChange={handlePreviewAvatar}
+                />
+                {avatar && (<img src={avatar.preview} alt='' width='80%'/>)}
+            </div>
+            
+            <div>
+                <ul>
+                    {posts.map(post => {
+                        return (<li key={post.id}>{post.title  || post.name}</li>)
+                    })}
+                </ul>
+            </div>
+            
+            <div>
+                {showGoToTop && (
+                    <button 
+                        style={{
+                            position: 'fixed',
+                            right: 20,
+                            bottom: 20
+                        }}
+                    >
+                        Go To Top
+                    </button>
+                )}
+            </div>
         </div>
     )
 }
