@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './UseEffect';
+// import App from './UseState';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // Fake comments
