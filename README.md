@@ -121,6 +121,7 @@
     - useEffect with dependencies, DOM events, timer functions, preview avatar, fake Chat App
   - <b>useLayoutEffect</b>
   - <b>useRef</b>
+    - Lưu các giá trị qua một tham chiếu bên ngoài function component
   - <b>useCallback</b>
   - <b>useMemo</b>
   - <b>useReducer</b>
