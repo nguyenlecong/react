@@ -11,12 +11,30 @@ import { useEffect, useState } from 'react'
 //  - Callback sẽ được gọi lại mỗi khi dependencies thay đổi
 
 // -----------------------------
+// Cleanup:
+//  - Remove listener / Unsubcirbe
+//  - Clear timers: setInterval, setTimout, clearInterval, clearTimeout
+
 // 1. Callback luôn được gọi sau khi component mounted
 // 2. Cleanup function luôn được gọi trước khi component unmounted
 // 3. Cleanup function luôn được gọi trước khi callback được gọi (trừ lần mounted)
 
 
 const tabs = ['posts', 'comments', 'albums']
+const lessons = [
+    {
+        id: 1,
+        name: 'ReactJS'
+    },
+    {
+        id: 2,
+        name: 'HTML CSS'
+    },
+    {
+        id: 3,
+        name: 'NodeJS'
+    },
+]
 
 function Content() {
     const [title, setTitle] = useState('')
@@ -26,6 +44,7 @@ function Content() {
     const [width, setWidth] = useState(window.innerWidth)
     const [countdown, setCountdown] = useState(180)
     const [avatar, setAvatar] = useState()
+    const [lessonId, setLessonId] = useState(1)
 
     useEffect(() => {
         document.title = title
@@ -80,7 +99,21 @@ function Content() {
         const file = e.target.files[0]
         file.preview =  URL.createObjectURL(file)
         setAvatar(file)
+
+        e.target.value = null  // Slect multiple times one image
     }
+
+    useEffect(() => {
+        const handleComment = ({detail}) => {
+            console.log(detail)
+        }
+        window.addEventListener(`lesson-${lessonId}`, handleComment)
+
+        // Cleanup function
+        return () => {
+            window.removeEventListener(`lesson-${lessonId}`, handleComment)
+        }
+    }, [lessonId])
 
     return (
         <div>
@@ -124,6 +157,22 @@ function Content() {
                     onChange={handlePreviewAvatar}
                 />
                 {avatar && (<img src={avatar.preview} alt='' width='80%'/>)}
+            </div>
+
+            <div>
+                <ul>
+                    {lessons.map(lesson => (
+                        <li
+                            key={lesson.id}
+                            style={{
+                                color: lessonId === lesson.id ? 'red' : '#333'
+                            }}
+                            onClick={() => setLessonId(lesson.id)}
+                        >
+                            {lesson.name}
+                        </li>
+                    ))}
+                </ul>
             </div>
             
             <div>
