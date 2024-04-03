@@ -132,6 +132,8 @@
       - Tránh tạo ra hàm mới không cần thiết, không kiểm soát trong function component
       - Nếu có dependencies, mà dependencies thay đổi sau mỗi lần re-render thì return tham chiếu mới
   - <b>useMemo</b>
+    - Tránh thực hiện lại một logic nào đó không cần thiết
+    - Thực hiện lại khi dependencies thay đổi
   - <b>useReducer</b>
   - <b>useContext</b>
   - <b>useImperativeHandle</b>
