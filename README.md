@@ -127,9 +127,10 @@
       - Not a Hook
       - Ghi nhớ những props của component để quyết định là có render lại component đó hay không để tối ưu hiệu năng, tránh render lại khi không cần thiết
       - Re-render khi có prop thay đổi
-      - Vấn đề: 
+      - Vấn đề: Tạo hàm mới
     - useCallback
-      - 
+      - Tránh tạo ra hàm mới không cần thiết, không kiểm soát trong function component
+      - Nếu có dependencies, mà dependencies thay đổi sau mỗi lần re-render thì return tham chiếu mới
   - <b>useMemo</b>
   - <b>useReducer</b>
   - <b>useContext</b>

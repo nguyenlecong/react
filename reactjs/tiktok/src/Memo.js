@@ -1,21 +1,15 @@
-import { useState } from "react"
-import Render from "./Const"
+import { memo } from 'react'
 
-function Content() {
-    const [count, setCount] = useState(0)
-
-    const increase = () => {
-        setCount(count + 1)
-    }
-
-    // Re-render 'Render' with each click -> use React.memo
+function Render({ onIncrease }) {
+    console.log('re-render')
+    
     return (
-        <div>
-            <Render />
-            <h1>{count}</h1>
-            <button onClick={increase}>Click me!</button>
-        </div>
+        <>
+            <h2>Hello</h2>
+            <button onClick={onIncrease}>Click me!</button>
+        </>
+
     )
 }
 
-export default Content
+export default memo(Render)

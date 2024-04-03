@@ -2,7 +2,7 @@ import { useState } from 'react'
 // import Content from './UseEffect'
 // import Content from './UseLayoutEffect'
 // import Content from './UseRef'
-import Content from './Memo'
+import Content from './useCallback'
 
 function App() {
     const [show, setShow] = useState(false)
