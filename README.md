@@ -135,6 +135,8 @@
     - Tránh thực hiện lại một logic nào đó không cần thiết
     - Thực hiện lại khi dependencies thay đổi
   - <b>useReducer</b>
+    - Có thêm một sự lựa chọn để sử dụng state cho function component
+    - Phù hợp trong tình huống state phức tạp hơn (ví dụ: nested array, object) hoặc có rất nhiều state, phụ thuộc nhau...
   - <b>useContext</b>
   - <b>useImperativeHandle</b>
   - <b>useDebugvalue</b>
