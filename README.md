@@ -140,5 +140,6 @@
     - Recap:
       - Có thể bóc tách const, actions, reducer ra file riêng
   - <b>useContext</b>
+    - Truyền dữ liệu từ component cha xuống component con không qua trung gian/props
   - <b>useImperativeHandle</b>
   - <b>useDebugvalue</b>
