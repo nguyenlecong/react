@@ -7,7 +7,8 @@ import { useState } from 'react'
 // import Content from './useReducer'
 // import Content from './useContext'
 // import { ThemeProvider } from "./ThemeContext"
-import Content from './GlobalContext'
+// import Content from './GlobalContext'
+import Content from './useImperativeHandle'
 
 function App() {
     const [show, setShow] = useState(false)

@@ -152,4 +152,6 @@
       - Depending on your app's setup, much better performance than working with just Context: Redux dễ dàng cấu hình và hiệu năng tốt hơn
       - React-context nên sử dụng cho ứng dụng vừa/nhỏ, set lại state không nhiều/hành vi ít dùng và ngược lại, sử dụng Redux
   - <b>useImperativeHandle</b>
+    - Tùy chỉnh được ref của 1 function component
+    - Tính đóng gói
   - <b>useDebugvalue</b>
