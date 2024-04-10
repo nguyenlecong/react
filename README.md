@@ -141,5 +141,15 @@
       - Có thể bóc tách const, actions, reducer ra file riêng
   - <b>useContext</b>
     - Truyền dữ liệu từ component cha xuống component con không qua trung gian/props
+    - Global state: đẩy state ra phạm vi cao nhất của ứng dụng, mọi component đều có thể truy cập state
+    - Redux vs React-context
+      - Redux là một thư viện mã nguồn mở, độc lập với React, kiến trúc quản lý state một cách tập trung
+      - Redux và React-context không thay thế cho nhau
+      - Debugging capabilities: Redux dễ dubug hơn do có React-debug
+      - Middleware: Redux dễ dàng apply middleware
+      - Addons and extensibility: Redux có các addon và dễ dàng mở rộng hơn
+      - Cross-platform and cross-framework usage: Redux là cross-platform, có thể sử dụng với tất cả dự án JS
+      - Depending on your app's setup, much better performance than working with just Context: Redux dễ dàng cấu hình và hiệu năng tốt hơn
+      - React-context nên sử dụng cho ứng dụng vừa/nhỏ, set lại state không nhiều/hành vi ít dùng và ngược lại, sử dụng Redux
   - <b>useImperativeHandle</b>
   - <b>useDebugvalue</b>
