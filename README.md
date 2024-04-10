@@ -137,6 +137,8 @@
   - <b>useReducer</b>
     - Có thêm một sự lựa chọn để sử dụng state cho function component
     - Phù hợp trong tình huống state phức tạp hơn (ví dụ: nested array, object) hoặc có rất nhiều state, phụ thuộc nhau...
+    - Recap:
+      - Có thể bóc tách const, actions, reducer ra file riêng
   - <b>useContext</b>
   - <b>useImperativeHandle</b>
   - <b>useDebugvalue</b>
