@@ -154,4 +154,10 @@
   - <b>useImperativeHandle</b>
     - Tùy chỉnh được ref của 1 function component
     - Tính đóng gói
-  - <b>useDebugvalue</b>
+  - <b>Sử dụng CSS trong dự án ReactJS</b>
+    - inline
+    - App.css file and import './App.css':
+      - Deveplopment -> npm/yarn start -> CSS internal (mỗi file là 1 style tag -> dễ quản lý)
+      - Production: npm/yarn run build -> CSS external (Gom nhiều file css thành 1 mini-file -> link tag -> tối ưu hiệu năng (số lần đóng mở file))
+    - CSS riêng cho mỗi component
+    - Tránh đặt trùng tên
