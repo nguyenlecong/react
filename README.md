@@ -157,7 +157,7 @@
 - <b>Sử dụng CSS trong dự án ReactJS</b>
   - inline
   - App.css file and import './App.css':
-    - Deveplopment -> npm/yarn start -> CSS internal (mỗi file là 1 style tag -> dễ quản lý)
+    - Deveplopment -> npm/yarn start -> CSS internal (mỗi file là 1 style tag -> dễ quản lý)   
     - Production: npm/yarn run build -> CSS external (Gom nhiều file css thành 1 mini-file -> link tag -> tối ưu hiệu năng (số lần đóng mở file))
   - CSS riêng cho mỗi component
   - Tránh đặt trùng tên?
@@ -171,3 +171,5 @@
   - Đặt tên theo camelCase -> thuận tiện khi sử dụng JS
 - <b>Thư viện clsx và classnames</b>
   - Sử dụng nhiều class và class động
+- <b>SASS/SCSS</b>
+  - Cú pháp làm tổ

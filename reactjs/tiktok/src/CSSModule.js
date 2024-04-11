@@ -21,6 +21,9 @@ function Content() {
             <div>
                 <Button primary/>
             </div>
+            <div>
+                <Button primary disabled/>
+            </div>
         </GlobalStyles>
     )
 }
