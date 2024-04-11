@@ -173,3 +173,6 @@
   - Sử dụng nhiều class và class động
 - <b>SASS/SCSS</b>
   - Cú pháp làm tổ
+- <b>React Router V6</b>
+  - `react-router-dom` lib: tạo ra cơ chế định tuyến cho ứng dụng được viết bởi Reactjs, di chuyển qua lại giữa các trang trong 1 website
+  - Định tuyến nội bộ

@@ -9,17 +9,19 @@ import { useState } from 'react'
 // import { ThemeProvider } from "./ThemeContext"
 // import Content from './GlobalContext'
 // import Content from './useImperativeHandle'
-import Content from './CSSModule';
+// import Content from './CSSModule'
+import Content from './ReactRouter'
 
 function App() {
     const [show, setShow] = useState(false)
     return (
         // <ThemeProvider>
             <div className="App">
-                <div style={{paddingLeft: 20}}>
+                {/* <div style={{paddingLeft: 20}}>
                     <button onClick={() => setShow(!show)}>Toggle</button>
                     {show && <Content />}
-                </div>
+                </div> */}
+                <Content />
             </div>
         // </ThemeProvider>
     );
