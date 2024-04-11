@@ -154,18 +154,20 @@
   - <b>useImperativeHandle</b>
     - Tùy chỉnh được ref của 1 function component
     - Tính đóng gói
-  - <b>Sử dụng CSS trong dự án ReactJS</b>
-    - inline
-    - App.css file and import './App.css':
-      - Deveplopment -> npm/yarn start -> CSS internal (mỗi file là 1 style tag -> dễ quản lý)
-      - Production: npm/yarn run build -> CSS external (Gom nhiều file css thành 1 mini-file -> link tag -> tối ưu hiệu năng (số lần đóng mở file))
-    - CSS riêng cho mỗi component
-    - Tránh đặt trùng tên?
-    - Tạo ra các file css hoạt động độc lập với nhau -> CSS module/Styled component
-  - <b>CSS module</b>
-    - Webpack hỗ trợ:
-      - import style from './App<b>.module</b>.css'
-      - styles.style
-    - Không có tính kế thừa -> Kết hợp với CSS thường: tạo global style
-    - Không CSS theo *, tag name -> vẫn ảnh hưởng hết
-    - Đặt tên theo camelCase -> thuận tiện khi sử dụng JS
+- <b>Sử dụng CSS trong dự án ReactJS</b>
+  - inline
+  - App.css file and import './App.css':
+    - Deveplopment -> npm/yarn start -> CSS internal (mỗi file là 1 style tag -> dễ quản lý)
+    - Production: npm/yarn run build -> CSS external (Gom nhiều file css thành 1 mini-file -> link tag -> tối ưu hiệu năng (số lần đóng mở file))
+  - CSS riêng cho mỗi component
+  - Tránh đặt trùng tên?
+  - Tạo ra các file css hoạt động độc lập với nhau -> CSS module/Styled component
+- <b>CSS module</b>
+  - Webpack hỗ trợ:
+    - import style from './App<b>.module</b>.css'
+    - styles.style
+  - Không có tính kế thừa -> Kết hợp với CSS thường: tạo global style
+  - Không CSS theo *, tag name -> vẫn ảnh hưởng hết
+  - Đặt tên theo camelCase -> thuận tiện khi sử dụng JS
+- <b>Thư viện clsx và classnames</b>
+  - Sử dụng nhiều class và class động

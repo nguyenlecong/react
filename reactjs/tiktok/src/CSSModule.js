@@ -1,6 +1,8 @@
+import Button from './components/Button'
 import Heading from './components/Heading'
 import Paragraph from './components/Paragraph'
 import GlobalStyles from './components/GlobalStyles'
+
 
 function Content() {
     return (
@@ -12,6 +14,12 @@ function Content() {
             <div className='d-flex'>
                 <div>Item 1</div>
                 <div>Item 2</div>
+            </div>
+            <div>
+                <Button />
+            </div>
+            <div>
+                <Button primary/>
             </div>
         </GlobalStyles>
     )
