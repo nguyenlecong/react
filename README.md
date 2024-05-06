@@ -1,3 +1,4 @@
+# React[^1]
 - <b>SPA</b> - Single-Page Application
   - ReactJS là một trong những thư viện tạo ta SPA
   - Được cho là cách tiếp cận hiện đại hơn
@@ -176,3 +177,5 @@
 - <b>React Router V6</b>
   - `react-router-dom` lib: tạo ra cơ chế định tuyến cho ứng dụng được viết bởi Reactjs, di chuyển qua lại giữa các trang trong 1 website
   - Định tuyến nội bộ
+
+[^1]: [ReactJS 2022](https://www.youtube.com/playlist?list=PL_-VfJajZj0UXjlKfBwFX73usByw3Ph9Q)
